@@ -1,0 +1,265 @@
+
+/*
+
+  ----typography system ----
+  --fs(px):
+  10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+
+
+  --font weights:
+   default:400
+
+    --line heights:
+     default:1;
+
+
+
+  -----colors------
+  --primary:#e67e22;
+
+  --tints:
+
+  --shades:
+
+   --grays:
+   #555; 
+
+*/
+:root{
+
+    --brand-clr: #e67e22;
+    --brand-clr-tint:#fdf2e9;
+    --brand-clr-shade:#cf711f;
+    
+    --txt-clr:#555;
+    --txt-clr-dark:#333;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+   
+    
+}
+*:focus,
+input:focus,
+select:focus{
+    outline:none;
+    box-shadow:0 0 0 0.6rem rgba(46, 25, 7, 0.627) ;
+}
+
+
+body{
+    font-family:'Rubik', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color:var(--txt-clr);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/************************************************************/
+                   /*general components*/
+/************************************************************/
+.heading-primary , .heading-secondary , .heading-tertiary{
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing:-0.5px;
+    color:var(--txt-clr-dark);
+    margin-bottom:1em;
+    text-transform: uppercase;
+
+}
+
+.heading-primary{
+    /* 62 px*/
+    font-size:5.2rem;
+  
+
+}
+
+.heading-secondary{
+font-size:4.5rem;
+margin-bottom:1.5em;
+
+}
+
+.heading-tertiary{
+    font-size:2.8rem;
+
+    
+}
+.subheading{
+    display: block;
+    color:var(--brand-clr-shade);
+    font-weight:500;
+    font-size: 1.6rem;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    margin-left:4rem;
+
+}
+
+.btn:link ,
+.btn:visited{
+background-color: var(--brand-clr);
+color:#fff;
+display:inline-block;
+
+padding:1.6rem 3.2rem;
+border-radius: 8px;
+font-size: 2rem;
+font-weight: 600;
+text-decoration: none;
+text-transform: capitalize;
+
+transition:all 0.5s;
+
+
+}
+.btn:hover ,
+.btn:active{
+    background-color: var(--brand-clr-shade);
+}
+
+.secondary-btn:link,
+.secondary-btn:visited
+{
+    box-shadow:inset 0 0 0 1px var(--brand-clr);
+ background-color: var(--brand-clr-tint);
+    color:var(--txt-clr-dark);
+    border:none;
+cursor: pointer;
+   
+}
+
+.secondary-btn:hover,
+.secondary-btn:active{
+
+background-color: var(--brand-clr-shade);
+color:#fff;
+}
+
+.btn--form{
+background-color: var(--brand-clr-tint);
+border:none;
+border-radius: 9px;
+font-size: 1.6rem;
+font-weight: 600;
+align-self:end;
+padding:1.2rem
+
+}
+.btn--form:hover{
+    background-color: #2e1907;
+    color:var(--brand-clr-tint);
+}
+.margin-right-sm{
+    margin-right:2em !important;
+    }
+    
+ul{
+    list-style: none;
+}
+.center-txt{
+    text-align: center;
+}
+a:link{
+    text-decoration: none;
+    display: inline-block;
+}
+
+strong{
+    font-weight: 500;
+}
+
+.centered-cont{
+    /*
+    most used 1140 /1200
+      */
+
+    max-width: 1200px;
+    margin-inline:auto;
+  padding: 0 2em;
+}
+
+
+.grid{
+    display: grid;
+    column-gap:6rem;
+    row-gap: 10rem;
+
+    margin-inline:auto;
+   
+  
+   
+
+}
+
+.grid:not(:last-child){
+    margin-bottom: 9.6rem;
+}
+
+.grid--2-cols{
+    grid-template-columns: repeat(2 ,1fr);  
+}
+
+.grid--3-cols{
+    grid-template-columns: repeat(3 ,1fr);
+}
+.grid--5-cols-footer{
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.grid--4-cols{
+    grid-template-columns: repeat(4 ,1fr);
+/* grid-template-columns: repeat(auto-fill,minmax(350px,400px)); */
+}
+
+.grid--center-v{
+    align-items: center; 
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link:link,
+.link:visited{
+    /* dont specify the fontsize let it be inherited*/
+    display: inline-block;
+    color:var(--brand-clr-shade);
+    padding-bottom:3px ;
+    border-bottom: 1px solid currentColor;
+    margin-top:4rem;
+    margin-inline:auto;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active{
+    /* try to calc current font *2 */
+    font-size:2rem;
+    border-bottom: 1px solid transparent;
+}
+
+
+.list{
+    margin-inline: auto;
+     font-size:1.8rem ;
+     display: flex;
+     flex-direction: column;
+     gap:1rem;
+ }
+ .list-item{
+ 
+     display: flex;
+     align-items: center;
+ 
+ }
